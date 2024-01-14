@@ -1,4 +1,5 @@
 import "./navBarStyle.css";
+import CartWidget from "../CartWidget/CartWidget";
 
 /*
 function Navbar () {
@@ -17,7 +18,9 @@ export default Navbar;
 function Navbar () {
     return (
         <div className="navBar">
-            <h1>Hola</h1>
+            <h1>Bienvenido/a</h1>
+            <CartWidget number={3}/>
+
         </div>
     )
 }
