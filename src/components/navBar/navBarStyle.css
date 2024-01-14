@@ -1,0 +1,16 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: rgb(128, 197, 244);
+    box-shadow: -4px 2px 40px 0 px rgb(128, 197, 244);
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+.navBar h1{
+    color: #4b4;
+    font-style: italic;
+}
+.logo {
+    max-width: 150px;
+}
