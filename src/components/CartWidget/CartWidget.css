@@ -2,8 +2,10 @@
     font-size: 40px;
     color: #4b4;
     cursor: pointer;
+    margin: 5px;
 }
 .cartNumber{
+    margin: 5px;
     position: absolute;
     font-size: 23px;
     top: -23px;

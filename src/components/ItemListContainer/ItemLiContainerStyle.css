@@ -1,0 +1,14 @@
+.containerStyle{
+    display: flex;
+    margin: 20px;
+    border: 1px solid;
+    border-color: #4b4;
+    border-radius: 5px;
+    justify-content: center;
+}
+.containerStyle h1{
+    color: #4b4;
+    font-style: italic;
+    margin: 20px;
+
+}

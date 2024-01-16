@@ -1,5 +1,6 @@
 import "./navBarStyle.css";
 import CartWidget from "../CartWidget/CartWidget";
+import Logo from "../../assets/logo.png"
 
 /*
 function Navbar () {
@@ -18,7 +19,7 @@ export default Navbar;
 function Navbar () {
     return (
         <div className="navBar">
-            <h1>Bienvenido/a</h1>
+            <img src={Logo} alt="logo" className="logo1"/>
             <CartWidget number={3}/>
 
         </div>
