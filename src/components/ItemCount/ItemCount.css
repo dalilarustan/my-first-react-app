@@ -1,0 +1,18 @@
+.counter{
+    font-size: 15px;
+}
+
+.controls{
+    display: flex;
+}
+.buttonCounter{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    font-size: 15px;
+    background-color: #4b4;
+}
+.buttonAñadir{
+    font-size: 15px;
+    background-color: #4b4;
+}
