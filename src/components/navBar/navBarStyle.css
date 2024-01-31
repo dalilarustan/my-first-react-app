@@ -24,3 +24,11 @@
     margin: 5px;
     height: 50px;
 }
+.categories{
+    font-size: 10px;
+    color:#4b4
+    
+}
+.categories &:hover{
+    cursor: pointer;
+}

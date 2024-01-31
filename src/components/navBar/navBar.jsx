@@ -2,6 +2,7 @@ import "./navBarStyle.css";
 import CartWidget from "../CartWidget/CartWidget";
 import Logo from "../../assets/logo.png";
 import {useState} from 'react'
+import { NavLink, Link } from "react-router-dom";
 
 /*
 function Navbar () {
@@ -17,23 +18,20 @@ function Navbar () {
 }
 export default Navbar;
 */
-function Navbar () {
-    const [seccionActual, setSeccionActual] = useState('inicio');
-    const handleClick = (seccion)=>{
-        setSeccionActual(seccion);
-        console.log(`Usted se encuentra en la sección: ${seccion}`)
-    }
+const Navbar= ()=> {
     return (
-        <div className="navBar">
-            <img src={Logo} alt="logo" className="logo1"/>
-            <div>
-                <button onClick={()=> handleClick('plantas interior')}>plantas de interior</button>
-                <button onClick={()=> handleClick('plantas exterior')}>plantas de exterior</button>
-                <button onClick={()=> handleClick('cuidado')}>cuidado</button>
+        <nav className="navBar">
+            <Link to="/">
+                <img src={Logo} alt="logo" className="logo1"/>
+            </Link>
+            <div className="categories">
+                <Link to={"/category/Plantas-interior"}>plantas interior</Link>
+                <Link to={"/category/Plantas-exterior"}>plantas exterior</Link>
+                <Link to={"/category/Cuidado"}>cuidado</Link>
             </div>
             <CartWidget number={3}/>
 
-        </div>
+        </nav>
     )
 }
 export default Navbar;

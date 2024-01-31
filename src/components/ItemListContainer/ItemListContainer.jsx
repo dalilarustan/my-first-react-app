@@ -1,15 +1,39 @@
 import React, { useState } from "react";
 import "./ItemLiContainerStyle.css";
-import { useEffect } from "react";
-import { getProducts } from "../../serverProducts/productMock";
-import ItemCount from "../ItemCount/ItemCount";
+import { useEffect} from "react";
+import { getProducts, getProductsByCategory } from "../../asynMock";
+import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
-function ItemListContainer ({greeting}){
+const ItemListContainer = ({greeting}) => {
+    const [items,setItems]=useState([])
+    const params = useParams
+    console.log(params)
+
+    const{categoryId}= useParams();
+
+    useEffect(()=>{
+        const fetchProducts = async()=>{
+            const asyncFunc = categoryId ? getProductsByCategory :getProducts
+            try{
+                const res = await asyncFunc(categoryId);
+                setItems(res);
+            }catch(err){
+                console.log(err.message);
+            }
+        };
+        fetchProducts();
+    },[categoryId])
+
+    return(
+        <div className="containerStyle">
+            <h1>{greeting}</h1>
+            <ItemList items={items}/>
+        </div>
+    )
+    /*
     const [items, setItems]=useState([])
     useEffect(()=>{
-        /*getProducts()
-            .then((res)=>setItems(res))
-            .catch(err=> console.log(err.message));*/
         const fetchProducts =async ()=>{
             try{
                 const res = await getProducts ()
@@ -43,6 +67,6 @@ function ItemListContainer ({greeting}){
 
             </div>
         </div>
-    )
+    ) */
 }
 export default ItemListContainer;
