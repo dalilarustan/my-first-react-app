@@ -63,14 +63,16 @@ export const getProducts =()=> {
         },500)
     })
 }
-export const getProductsById=(id)=>{
-    return new Promise ((resolve)=>{
-        setTimeout(()=>{
-            resolve(items.find((product)=>product.id.toString()=== id.toString())
-            );
-        },500)
-    })
-}
+export const getProductsById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const product = items.find((product) => product.id.toString() === id.toString());
+            if (product) {
+                resolve(product);
+            }
+        }, 500);
+    });
+};
 
 export const getProductsByCategory =(category)=>{
     return new Promise ((resolve)=>{

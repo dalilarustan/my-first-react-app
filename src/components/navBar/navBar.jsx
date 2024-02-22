@@ -2,7 +2,7 @@ import "./navBarStyle.css";
 import CartWidget from "../CartWidget/CartWidget";
 import Logo from "../../assets/logo.png";
 import {useState} from 'react'
-import { NavLink, Link } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 /*
 function Navbar () {
@@ -25,9 +25,9 @@ const Navbar= ()=> {
                 <img src={Logo} alt="logo" className="logo1"/>
             </Link>
             <div className="categories">
-                <Link to={"/category/Plantas-interior"}>plantas interior</Link>
-                <Link to={"/category/Plantas-exterior"}>plantas exterior</Link>
-                <Link to={"/category/Cuidado"}>cuidado</Link>
+                <NavLink to={"/category/Plantas-interior"}>plantas interior</NavLink>
+                <NavLink to={"/category/Plantas-exterior"}>plantas exterior</NavLink>
+                <NavLink to={"/category/Cuidado"}>cuidado</NavLink>
             </div>
             <CartWidget number={3}/>
 

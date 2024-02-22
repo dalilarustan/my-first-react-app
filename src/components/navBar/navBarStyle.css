@@ -25,10 +25,14 @@
     height: 50px;
 }
 .categories{
+    text-decoration: none;
     font-size: 10px;
     color:#4b4
     
 }
 .categories &:hover{
     cursor: pointer;
+}
+NavLink{
+    text-decoration: none;
 }
