@@ -7,32 +7,20 @@
     padding: 15px 30px;
     border-radius: 8px;
 }
-.navBar h1{
-    color: #4b4;
-    font-style: italic;
-}
+
 .logo1 {
     max-width: 120px;
     border-radius: 5px;
     max-height: 80px;
 }
-.navBar button{
+
+.navlink{
+    text-decoration: none;
     color: #4b4;
     cursor: pointer;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: larger;
-    margin: 5px;
+    font-size:x-large;
+    margin: 15px;
     height: 50px;
-}
-.categories{
-    text-decoration: none;
-    font-size: 10px;
-    color:#4b4
-    
-}
-.categories &:hover{
-    cursor: pointer;
-}
-NavLink{
-    text-decoration: none;
+    font-weight: bold;
 }

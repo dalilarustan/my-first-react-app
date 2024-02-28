@@ -3,25 +3,23 @@ import { getProductsById } from "../../asynMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
+import {getFirestore, doc, getDoc} from "firebase/firestore";
 
 const ItemDetailContainer =()=>{
-    const [product, setProduct]= useState(null)
-
-    const{itemId}= useParams()
+    const [data, setData]= useState([]);
+    const{itemId}= useParams();
 
     useEffect(()=>{
-        getProductsById(itemId)
-            .then(response=>{
-                setProduct(response)
-            })
-            .catch(error=>{
-                console.error(error)
-            })
+        const querydb = getFirestore();
+        const queryDoc= doc(querydb, "productos", itemId);
+        getDoc(queryDoc)
+            .then(res=>setData({id: res.id, ...res.data() }))
     },[itemId])
     return(
         <div className="ItemDetailContainer">
-            <ItemDetail {...product}/>
+            <ItemDetail data={data}/>
         </div>
     )
 }
 export default ItemDetailContainer
+

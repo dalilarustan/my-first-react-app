@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Item = ({id, nombre, precio, cantidad, img})=> {
     return (
-        <div className="listItems item">
+        <div className="item listItems">
             <header className="Header">
-                <h2 className="ItemHeader">
+                <h2>
                     {nombre}
                 </h2>
             </header>

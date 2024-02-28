@@ -1,3 +1,4 @@
-.ItemDetailContainer{
-    display: inline;
+.itemDetailContainer{
+    justify-content: center;
+    align-items: center;
 }

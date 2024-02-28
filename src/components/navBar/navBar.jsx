@@ -25,11 +25,11 @@ const Navbar= ()=> {
                 <img src={Logo} alt="logo" className="logo1"/>
             </Link>
             <div className="categories">
-                <NavLink to={"/category/Plantas-interior"}>plantas interior</NavLink>
-                <NavLink to={"/category/Plantas-exterior"}>plantas exterior</NavLink>
-                <NavLink to={"/category/Cuidado"}>cuidado</NavLink>
+                <NavLink className="navlink" to={"/category/Plantas de interior"}>plantas interior</NavLink>
+                <NavLink className="navlink" to={"/category/Plantas de exterior"}>plantas exterior</NavLink>
+                <NavLink className="navlink" to={"/category/Cuidado"}>cuidado</NavLink>
             </div>
-            <CartWidget number={3}/>
+            <CartWidget/>
 
         </nav>
     )
