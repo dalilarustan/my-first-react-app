@@ -30,7 +30,6 @@ const Navbar= ()=> {
                 <NavLink className="navlink" to={"/category/Cuidado"}>cuidado</NavLink>
             </div>
             <CartWidget/>
-
         </nav>
     )
 }

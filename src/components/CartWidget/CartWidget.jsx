@@ -3,7 +3,7 @@ import "./CartWidget.css";
 import Modal from "../Modal/Modal";
 import { useState } from 'react';
 import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
+import { useCartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import cart from "../../assets/cart.png";
 
@@ -24,11 +24,12 @@ function CartWidget ({number}){
 }
 export default CartWidget; */
 const CartWidget =()=>{
-    const{totalQuantity}=useContext(CartContext)
+    const{totalProductos}=useCartContext()
     return(
-        <Link to="/cart" className='containerCart' style={{display:totalQuantity>0 ? "block":"none"}}>
-            <img className='cartIcon' src={cart} alt='cartWidget'/>
-            {totalQuantity}
+        <Link to="/cart" className='containerCart'>
+            <ShoppingCartIcon className='cartIcon'/>
+            <span>{totalProductos() || ""}</span>
+            {totalProductos}
         </Link>
     )
 }
