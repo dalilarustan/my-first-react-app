@@ -9,6 +9,7 @@ export const CartProvider = ({children})=> {
     console.log(cart);
 
     const addProduct = (item, quantity) => {
+        
         if (isInCart(item.id)){
             setCart(cart.map(product=>{
                 return product.id === item.id ?{ ...product,quantity: product.quantity + quantity} : product
@@ -29,6 +30,7 @@ export const CartProvider = ({children})=> {
     const removeProduct = (id)=>setCart(cart.filter(product=>product.id !==id));
     return(
         <CartContext.Provider value={{
+            cart,
             clearCart,
             isInCart,
             removeProduct,

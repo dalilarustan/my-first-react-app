@@ -25,6 +25,7 @@ function CartWidget ({number}){
 export default CartWidget; */
 const CartWidget =()=>{
     const{totalProductos}=useCartContext()
+    console.log(totalProductos())
     return(
         <Link to="/cart" className='containerCart'>
             <ShoppingCartIcon className='cartIcon'/>
